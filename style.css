@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Roboto:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Macondo', cursive;
+    
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(33, 32, 33);
+}
+
+.calendario {
+    width: 430px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.669),
+    -10px -10px 20px rgba(0, 0, 0, 0.436);
+}
+
+.calendario .mes {
+    width: 100%;
+    height: 20%;
+    padding: 20px 30px;
+    background-color: #342ac2;
+    background-image: linear-gradient(
+        90deg,
+    #3c09f3 0%,
+    #6d54f5 55%,
+    #d2ccf5 100%); 
+    justify-content: space-between !important;
+    text-align: center;  
+}
+
+.calendario .mes img {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.mes img:hover {
+    opacity: 0.8;
+}
+
+.mes h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #dbe7e3;
+}
+
+.mes p {
+    font-weight: 300;
+    color: #e2ebe8;
+    font-family: cursive;
+}
+
+.semana {
+    width: 100%;
+    padding: 10px;
+    height: 10%;
+    padding-bottom: 0;
+}
+
+.semana div {
+    width: calc(430px / 7);
+    height: 80%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: 0.2s;
+  }
+
+  .dias {
+    width: 100%;
+    height: 70%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 10px;
+    padding-top: 0;
+  }
+
+  .dias div {
+    width: calc(400px / 7);
+    height: calc(400px / 7);
+    text-align: center;
+    font-size: 18px;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+  }
+
+  .dias .dias_anteriores,
+  .dias .dias_proximos {
+      color: rgba(0, 0, 0, 0.349);
+  }
+
+  .dias .hoje {
+    background-color: #191ce4;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.dias .hoje:hover {
+    background-color: #592df7;
+  }
+
+.dias div:not(.hoje):hover{
+    border-radius: 50%;
+    border: 0.5px solid black;
+    background-color: rgba(0, 0, 0, 0.215);
+    cursor: pointer;
+}
